@@ -2,9 +2,6 @@ import pandas as pd
 import streamlit as st
 import plotly.graph_objects as go
 import plotly.offline as pyo # Paga gerar arquivo html fora do Jupyter
-## Gerada as funções no arquivo "df_to_streamlit.py"
-#from df_to_streamlit import total_vendas_period, vendas_cpf_cnpj, busca_por_keyword
-
 
 
 ### PASSO1: Criação das Fuções a serem usadas no DashBoard Streamlit
@@ -165,9 +162,10 @@ barmodes = st.sidebar.select_slider('Estilo de Barras:', ('group', 'stack'))
 
 st.sidebar.markdown('___')
 st.sidebar.header('Produtos')
-keyword1 = st.sidebar.text_input('keyword1', placeholder='Ex. Penalty')
-keyword2 = st.sidebar.text_input('keyword2', placeholder='Ex. Nike')
-keyword3 = st.sidebar.text_input('keyword3', placeholder='Ex. Adidas')
+st.sidebar.text('Ex. Adidas, Penalty')
+keyword1 = st.sidebar.text_input('keyword1', )
+keyword2 = st.sidebar.text_input('keyword2',)
+keyword3 = st.sidebar.text_input('keyword3')
 
 
 ## Main page

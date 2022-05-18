@@ -5,7 +5,7 @@ import plotly.offline as pyo # Paga gerar arquivo html fora do Jupyter
 
 
 ### PASSO1: Criação das Fuções a serem usadas no DashBoard Streamlit
-df = pd.read_pickle('out/Final_df.pkl')
+df = pd.read_excel('out/Final_df.xlsx')
 df = df.loc[df['dt_emissao'].dt.year != 2010].reset_index()
 
 ## Gráfico 1: Total de Vendas por período

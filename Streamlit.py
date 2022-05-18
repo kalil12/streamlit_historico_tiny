@@ -153,7 +153,7 @@ st.set_page_config(layout="wide")
 
 ## SIDEBAR
 st.sidebar.header('Total de Vendas')
-period = st.sidebar.radio( 'Período', ('YS', 'M', 'W', 'D')  )
+period = st.sidebar.radio( 'Período', ('YS', 'M', 'W', 'D'), index=1  )
 st.sidebar.text('YS=Year, M=Month, W=Week, D=Day')
 
 st.sidebar.markdown('___')

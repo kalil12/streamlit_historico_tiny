@@ -1,4 +1,3 @@
-from ast import keyword
 import pandas as pd
 import plotly.graph_objects as go
 import plotly.offline as pyo # Paga gerar arquivo html fora do Jupyter

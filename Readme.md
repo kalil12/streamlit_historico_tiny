@@ -7,6 +7,14 @@
 2. [XML_to_Dataframe]
  - Lê cada xml e monta dataframe na pasta >*out*. Em 12-05-2022 levou mais de 60 minutos.
  - Salvo como "DataFrame-Generated-{{date}}.pkl"
+ - Após esse processamento pode <ul>apagar todos os XML</ul> da pasta data, de modo a liberar armazenamento.
+ ```python
+from glob import glob
+import os
+
+arr = glob('data/*.xml')
+[os.remove(f) for f in arr]
+ ```
 
 3. [Tratamento_df]
 - Concat dataframe Linx

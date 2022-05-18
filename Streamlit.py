@@ -5,7 +5,8 @@ import plotly.offline as pyo # Paga gerar arquivo html fora do Jupyter
 
 
 ### PASSO1: Criação das Fuções a serem usadas no DashBoard Streamlit
-df = pd.read_excel('out/Final_df.xlsx')
+#df = pd.read_excel('out/Final_df.xlsx')
+df = pd.read_pickle('out/Final_df.pkl')
 df = df.loc[df['dt_emissao'].dt.year != 2010].reset_index()
 
 ## Gráfico 1: Total de Vendas por período
@@ -153,6 +154,7 @@ st.set_page_config(layout="wide")
 ## SIDEBAR
 st.sidebar.header('Total de Vendas')
 period = st.sidebar.radio( 'Período', ('YS', 'M', 'W', 'D')  )
+st.sidebar.text('YS=Year, M=Month, W=Week, D=Day')
 
 st.sidebar.markdown('___')
 
@@ -170,6 +172,7 @@ keyword3 = st.sidebar.text_input('keyword3')
 
 ## Main page
 ### Total de Vendas no perído
+st.title('Dash Histórico Vendas Mercadão')
 total_vendas_graph = total_vendas_period(period)
 st.plotly_chart(total_vendas_graph)
 
